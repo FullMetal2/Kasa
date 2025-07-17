@@ -8,16 +8,16 @@ const Header = () => {
       <div className="header-container">
         <img src="./public/logo/LOGO.png" alt="Kasa" className="header-logo" />
         <nav className='nav-link'>
-          <NavLink 
-                to="/" 
-                className={({ isActive }) => 
-                  isActive ? "nav-link active" : "nav-link"
-                }
-              >Accueil</NavLink>
-          <NavLink to="/About" 
-                    className={({isActive}) => 
-                      isActive ? "nav-link active" : "nav-link"}>
-                        A propos</NavLink>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
+          >Accueil</NavLink>
+          <NavLink to="/About"
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"}
+          >A propos</NavLink>
         </nav>
       </div>
     </header>

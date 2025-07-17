@@ -21,7 +21,6 @@ nav {
   gap: 57px;
 }
 .nav-link {
-	color: $color_1;
 	color: #000;
 	font-family: Montserrat;
 	text-decoration: none;
@@ -29,7 +28,6 @@ nav {
 	font-weight: 500;
 	transition: text-decoration 0.3s ease;
 	&:hover {
-		// text-decoration: underline;
 		color: #000;
 	}
 	&:visited {
