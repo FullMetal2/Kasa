@@ -1,33 +1,4 @@
-$text-color: #fff;
-$font-family: Montserrat;
-$banner-BR: 20px;
-
 .container-banner {
     display: flex;
     justify-content: center;
-}
-.banner {
-    width: 1240px;
-    height: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-position: center;
-    border-radius: $banner-BR;
-    position: relative;
-    &::before { 
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        border-radius: $banner-BR;
-    }
-}
-h1 {
-    font-family: $font-family;
-    color: $text-color;
-    z-index: 1;
 }
