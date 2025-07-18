@@ -1,0 +1,12 @@
+
+.container-gallery {
+  width: 1240px;
+  height: 829px;
+  background-color: #f6f6f6;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+img {
+  height: 340px;
+  width: 340px;
+}
