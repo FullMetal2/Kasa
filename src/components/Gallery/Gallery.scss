@@ -6,13 +6,11 @@ $font-weight: 700;
 .container {
   display: flex;
   justify-content: center;
-  //overflow: hidden;
   .container-gallery {
     width: 1240px;
-    //height: 829px;
     background-color: $bg-color;
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     border-radius: 25px;
     padding: 60px 15px;
     gap: 50px;
