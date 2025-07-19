@@ -1,12 +1,43 @@
+$color: #fff;
+$bg-color: #f6f6f6;
+$font-family: Montserrat;
+$font-weight: 700;
 
-.container-gallery {
-  width: 1240px;
-  height: 829px;
-  background-color: #f6f6f6;
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
-img {
-  height: 340px;
-  width: 340px;
+.container {
+  display: flex;
+  justify-content: center;
+  //overflow: hidden;
+  .container-gallery {
+    width: 1240px;
+    //height: 829px;
+    background-color: $bg-color;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    border-radius: 25px;
+    padding: 60px 15px;
+    gap: 50px;
+    .card {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      a {
+        color: $color;
+        text-decoration: none;
+      }
+      h3 {
+        text-align: left;
+        position: absolute;
+        bottom: -5px;
+        padding-left: 10px;
+        z-index: 1;
+        font-family: $font-family;
+        font-weight: $font-weight;
+      }
+      img {
+        height: 340px;
+        width: 340px;
+        border-radius: 10px;
+      }
+    }
+  }
 }
