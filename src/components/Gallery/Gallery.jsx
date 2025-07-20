@@ -8,14 +8,14 @@ function Gallery() {
     <div className="container">
       <section className="container-gallery">
         {logementsData.map((logement) => (
-          <div key={logement.id} className="card">
+          <article key={logement.id} className="card">
             <Link to={`/housing/${logement.id}`}>
-              <div className="title">
+              <figure>
                 <img src={logement.cover} alt={logement.title} />
-                <h3>{logement.title}</h3>
-              </div>
+                <figcaption>{logement.title}</figcaption>
+              </figure>
             </Link>
-          </div>
+          </article>
         ))}
       </section>
     </div>

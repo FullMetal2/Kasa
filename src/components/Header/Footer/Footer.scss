@@ -6,9 +6,10 @@ $footer-padding: 20px;
 footer {
   background-color: $footer-bg;
   color: $footer-text;
-  padding: $footer-padding 0; 
-  
-  // Nesting Sass 
+  padding: $footer-padding 0;
+  margin-top: 40px;
+
+  // Nesting Sass
   .footer-container {
     max-width: 100%;
     display: flex;
@@ -17,13 +18,13 @@ footer {
     align-items: center;
     height: auto;
   }
-  
+
   .footer-logo {
     width: 122px;
     height: 40px;
     padding: $footer-padding;
   }
-  
+
   p {
     font: {
       family: Montserrat;
@@ -32,4 +33,3 @@ footer {
     }
   }
 }
-

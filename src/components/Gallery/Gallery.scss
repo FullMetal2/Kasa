@@ -18,23 +18,25 @@ $font-weight: 700;
       display: flex;
       justify-content: center;
       position: relative;
+      overflow: hidden;
       a {
         color: $color;
         text-decoration: none;
       }
-      h3 {
-        text-align: left;
+      figcaption {
+        width: 300px;
         position: absolute;
-        bottom: -5px;
-        padding-left: 10px;
-        z-index: 1;
+        bottom: 30px;
+        padding: 10px;
         font-family: $font-family;
         font-weight: $font-weight;
       }
       img {
+        display: block;
         height: 340px;
         width: 340px;
         border-radius: 10px;
+        object-fit: cover;
       }
     }
   }
