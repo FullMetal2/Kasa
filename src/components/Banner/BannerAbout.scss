@@ -1,18 +1,26 @@
 $banner-BR: 20px;
+
 .container-banner {
   display: flex;
   justify-content: center;
 }
-.banner {
+.bannerAbout {
   width: 1240px;
   height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-position: center;
   border-radius: $banner-BR;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
   position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: $banner-BR;
+  }
   @media (max-width: 600px) {
     width: 335px;
     height: 111px;
