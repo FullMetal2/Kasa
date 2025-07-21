@@ -26,10 +26,19 @@ $banner-BR: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: $banner-BR;
   }
-}
-h1 {
-  font-family: $font-family;
-  color: $text-color;
-  z-index: 1;
-  text-shadow: 1px 1px 2px black;
+  @media (max-width: 600px) {
+    width: 335px;
+    height: 111px;
+  }
+  h1 {
+    font-family: $font-family;
+    color: $text-color;
+    font-size: 48px;
+    z-index: 1;
+    text-shadow: 1px 1px 2px black;
+    @media (max-width: 600px) {
+      font-size: 24px;
+      padding-left: 20px;
+    }
+  }
 }

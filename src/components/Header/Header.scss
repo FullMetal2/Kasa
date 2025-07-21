@@ -21,11 +21,18 @@ header {
   .header-logo {
     height: 68px;
     width: 210px;
+    @media (max-width: 600px) {
+      height: 45px;
+      width: 145px;
+    }
   }
 
   nav {
     display: flex;
     gap: 57px;
+    @media (max-width: 600px) {
+      gap: 26px;
+    }
   }
 
   .nav-link {
@@ -46,6 +53,9 @@ header {
     &.active {
       color: $text-color;
       text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      font-size: 16px;
     }
   }
 }

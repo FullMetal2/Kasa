@@ -1,5 +1,11 @@
+body {
+  padding: 0;
+}
 .home-container {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  @media (max-width: 600px) {
+    gap: 22px;
+  }
 }
