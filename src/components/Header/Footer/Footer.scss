@@ -9,8 +9,6 @@ footer {
   padding: $footer-padding 0;
   display: flex;
   justify-content: center;
-  max-width: 100%;
-  width: 1440px;
   margin-top: 40px;
   @media (max-width: 600px) {
     margin-top: 0;
@@ -21,7 +19,6 @@ footer {
     max-width: 1440px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: auto;
   }
