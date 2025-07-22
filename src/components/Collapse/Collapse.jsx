@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import "./Collapse.scss";
-import { ReactComponent as Arrow } from "../../assets/logo/Vectorsvg.svg";
+import Arrow from "../../assets/logo/Vector.png";
 
 function Collapse({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="collapse">
-      <div className="collapse-header">
-        <h1>{title}</h1>
-        <Arrow
+      <h3 className="title-collapse">
+        {title}
+        <img
+          src={Arrow}
           className={`arrow-collapse ${isOpen ? "open" : ""}`}
           onClick={() => setIsOpen(!isOpen)}
         />
-      </div>
+      </h3>
       {isOpen && <div className="content">{children}</div>}
     </div>
   );
