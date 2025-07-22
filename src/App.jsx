@@ -6,6 +6,7 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Error404 from "./Pages/error404/Error404";
 import Housing from "./Pages/housing/Housing";
+import "./data/JSON.logements.json";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/error404" element={<Error404 />} />
+            <Route path="/housing/:id" element={<Housing />} />
+            <Route path="*" element={<Error404 />} />
           </Routes>
         </main>
         <Footer />
