@@ -1,0 +1,55 @@
+$color: #fff;
+$vectorP: absolute;
+.gallery-housing {
+  display: flex;
+  justify-content: center;
+
+  .container-cover {
+    position: relative;
+
+    .carrousel {
+      width: 1240px;
+      height: 415px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 769px) {
+        width: 335px;
+        height: 255px;
+      }
+
+      .img-carrousel {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+      .image-counter {
+        position: $vectorP;
+        bottom: 30px;
+        color: $color;
+        @media (max-width: 769px) {
+          display: none;
+        }
+      }
+    }
+    .vector1 {
+      position: $vectorP;
+      right: 30px;
+      transform: translateY(25%);
+      bottom: 50%;
+    }
+    .vector2 {
+      position: $vectorP;
+      left: 30px;
+      transform: translateY(25%);
+      bottom: 50%;
+    }
+    .vectorsize {
+      @media (max-width: 769px) {
+        width: 11px;
+        height: 19px;
+      }
+    }
+  }
+}

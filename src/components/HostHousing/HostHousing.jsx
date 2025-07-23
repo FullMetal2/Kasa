@@ -9,10 +9,14 @@ function HostHousing() {
   return (
     <div>
       {logement && (
-        <article>
-          <div>{logement.host.name}</div>
+        <article className="container-host">
+          <div className="host">{logement.host.name}</div>
           <div>
-            <img src={logement.host.picture} alt={logement.host.name} />
+            <img
+              src={logement.host.picture}
+              alt={logement.host.name}
+              className="host-cover"
+            />
           </div>
         </article>
       )}

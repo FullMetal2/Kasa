@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import logementsData from "../../data/JSON.logements.json";
+import "./TagsHousing.scss";
 
 function TagsHousing() {
   const { id } = useParams();
@@ -9,7 +10,7 @@ function TagsHousing() {
     <div>
       {logement && (
         <article>
-          <ul>
+          <ul className="tags">
             {logement.tags.map((tags) => (
               <li key={tags}>{tags}</li>
             ))}
