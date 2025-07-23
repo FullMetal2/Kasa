@@ -2,43 +2,37 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import logementsData from "../../data/JSON.logements.json";
 import Collapse from "../../components/Collapse/Collapse";
+import GalleryHousing from "../../components/GalleryHousing/GalleryHousing";
+import TagsHousing from "../../components/TagsHousing/TagsHousing";
+import HostHousing from "../../components/HostHousing/HostHousing";
+import RatingHousing from "../../components/RatingHousing/RatingHousing";
+import EquipmentsHousing from "../../components/EquipmentsHousing/EquipmentsHousing";
 
 function Housing() {
   const { id } = useParams();
   const logement = logementsData.find((item) => item.id === id);
 
   return (
-    <div className="housing">
+    <div className="gallery-housing">
       <section>
         {logement && (
           <article>
-            <img src={logement.cover} alt={logement.title} />
+            <GalleryHousing />
             <div>
               <h2>{logement.title}</h2>
               <p>{logement.location}</p>
-              <ul>
-                {logement.tags.map((tags) => (
-                  <li key={tags}>{tags}</li>
-                ))}
-              </ul>
+              <TagsHousing />
             </div>
             <div>
               <div>
-                <div>{logement.host.name}</div>
-                <div>
-                  <img src={logement.host.picture} alt={logement.host.name} />
-                </div>
+                <HostHousing />
               </div>
-              <div>{logement.rating}</div>
+              <RatingHousing />
             </div>
             <div>
               <Collapse title="Descrition">{logement.description}</Collapse>
               <Collapse title="Équipements">
-                <ul>
-                  {logement.equipments.map((equipments) => (
-                    <li key={equipments}>{equipments}</li>
-                  ))}
-                </ul>
+                <EquipmentsHousing />
               </Collapse>
             </div>
           </article>
