@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import logementsData from "../../data/JSON.logements.json";
+import "./HostHousing.scss";
 
 function HostHousing() {
   const { id } = useParams();

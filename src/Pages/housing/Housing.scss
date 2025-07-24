@@ -3,13 +3,22 @@ $family: Montserrat;
 
 .title {
   color: $color;
+  margin: 0;
   font: {
     family: $family;
     size: 36px;
     weight: 500;
   }
+  @media (max-width: 769px) {
+    width: 335px;
+    font : {
+      size: 18px;
+    }
+  }
 }
 .location {
+  margin-top: 10px;
+  margin-bottom: 20px;
   font: {
     family: $family;
     size: 18px;
@@ -18,14 +27,14 @@ $family: Montserrat;
 }
 .grid {
   display: grid;
-  grid-template-columns: 2fr 1fr; // partie gauche (infos) / droite (hôte)
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto;
-  gap: 1rem;
   width: 1240px;
 }
 .container-host {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .gap {
   display: flex;
@@ -40,10 +49,11 @@ $family: Montserrat;
 .collapse-housing {
   display: flex;
   width: 1240px;
-  justify-content: space-between;
+  align-items: flex-start;
   gap: 76px;
-  > * {
-    flex: 1; // chaque collapse prend 50% si tu as 2 enfants
-    max-width: 100%;
+}
+.left {
+  @media (max-width: 769px) {
+    width: 335px;
   }
 }
