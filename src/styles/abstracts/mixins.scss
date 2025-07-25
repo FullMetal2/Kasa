@@ -1,0 +1,14 @@
+/* Responsive */
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == M {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint == T {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}

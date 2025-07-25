@@ -1,27 +1,25 @@
-// Variables sass
-$header-bg: #fff;
-$text-color: #000;
-$header-padding: 20px 0;
-$transition-speed: 0.3s ease;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 header {
-  background-color: $header-bg;
-  padding: $header-padding;
+  background-color: variables.$header-bg;
+  padding: 20px 0;
+  @include mixins.respond-to(M) {
+    width: 335px;
+  }
 
-  // Nesting Sass
   .header-container {
-    max-width: 1240px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
     padding: 0 20px;
   }
 
   .header-logo {
     height: 68px;
     width: 210px;
-    @media (max-width: 600px) {
+    @include mixins.respond-to(M) {
       height: 45px;
       width: 145px;
     }
@@ -30,32 +28,31 @@ header {
   nav {
     display: flex;
     gap: 57px;
-    @media (max-width: 600px) {
+    @include mixins.respond-to(M) {
       gap: 26px;
     }
   }
 
   .nav-link {
-    color: $text-color;
+    color: variables.$text-color-header;
     font: {
-      family: Montserrat;
-      size: 24px;
-      weight: 500;
+      size: variables.$font-middle-size;
+      weight: variables.$weight;
     }
     text-decoration: none;
-    transition: text-decoration $transition-speed;
+    transition: text-decoration 0.3s ease;
 
     &:hover,
     &:visited {
-      color: $text-color;
+      color: variables.$text-color-header;
     }
 
     &.active {
-      color: $text-color;
+      color: variables.$text-color-header;
       text-decoration: underline;
     }
-    @media (max-width: 600px) {
-      font-size: 16px;
+    @include mixins.respond-to(M) {
+      font-size: variables.$font-responsive;
     }
   }
 }

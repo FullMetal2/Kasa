@@ -25,14 +25,6 @@ const Header = () => {
           >
             A propos
           </NavLink>
-          <NavLink
-            to="/Error404"
-            className={({ isActive }) =>
-              isActive ? "nav-link active" : "nav-link"
-            }
-          >
-            A propos
-          </NavLink>
         </nav>
       </div>
     </header>

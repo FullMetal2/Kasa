@@ -1,11 +1,11 @@
+@use "../../styles/main.scss" as *;
+
 $color: #fff;
 $bg-color: #f6f6f6;
 $font-family: Montserrat;
 $font-weight: 700;
 
 .container {
-  display: flex;
-  justify-content: center;
   .container-gallery {
     width: 1240px;
     background-color: $bg-color;

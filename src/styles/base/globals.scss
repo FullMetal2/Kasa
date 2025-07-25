@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as variables;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: variables.$font-main;
+  color: variables.$text-color;
+  width: variables.$container-max-width;
+  margin: auto;
+}

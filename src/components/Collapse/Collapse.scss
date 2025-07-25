@@ -1,5 +1,7 @@
+@use "../../styles/abstracts/" as abstracts;
+
 $color: #fff;
-$bg-color: rgba(255, 96, 96, 1);
+
 $family: Montserrat;
 
 .collapse {
@@ -33,7 +35,7 @@ $family: Montserrat;
     justify-content: space-between;
     align-items: center;
     color: $color;
-    background: $bg-color;
+    background: abstracts.$bg-color;
     border-radius: 5px;
     height: 50px;
     padding-left: 10px;

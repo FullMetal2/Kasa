@@ -1,42 +1,33 @@
-// Variables sass
-$footer-bg: #000;
-$footer-text: #fff;
-$footer-padding: 20px;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 footer {
-  background-color: $footer-bg;
-  color: $footer-text;
-  padding: $footer-padding 0;
-  display: flex;
-  justify-content: center;
+  background-color: variables.$footer-bg;
+  color: variables.$text-color;
+  padding: 20px;
+  width: 1440px;
   margin-top: 40px;
-  @media (max-width: 600px) {
+  @include mixins.respond-to(M) {
     margin-top: 0;
   }
 
-  // Nesting Sass
   .footer-container {
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     height: auto;
   }
 
   .footer-logo {
     width: 122px;
     height: 40px;
-    padding: $footer-padding;
+    margin-bottom: 30px;
   }
 
   p {
     font: {
-      family: Montserrat;
-      weight: 500;
-      size: 16px;
+      weight: variables.$weight;
+      size: variables.$font-size-footer;
     }
-    @media (max-width: 600px) {
-      size: 12px;
+    @include mixins.respond-to(M) {
+      size: variables.$font-responsive-2;
     }
   }
 }
