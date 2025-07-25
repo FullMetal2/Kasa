@@ -1,9 +1,10 @@
 .fa-star {
-  color: grey; // étoiles vides
+  color: rgba(227, 227, 227, 1);
+
   font-size: 20px;
 }
 
 span.active .fa-star {
-  color: red; // étoiles remplies
+  color: rgba(255, 96, 96, 1);
   font-size: 20px;
 }
