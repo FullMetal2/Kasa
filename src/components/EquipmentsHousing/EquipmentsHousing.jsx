@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import logementsData from "../../data/JSON.logements.json";
+import "./EquipmentsHousing.scss";
 
 function EquipmentsHousing() {
   const { id } = useParams();
@@ -10,7 +11,7 @@ function EquipmentsHousing() {
     <div>
       {logement && (
         <article>
-          <ul>
+          <ul className="style-none">
             {logement.equipments.map((equipments) => (
               <li key={equipments}>{equipments}</li>
             ))}

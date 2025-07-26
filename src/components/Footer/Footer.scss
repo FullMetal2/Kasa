@@ -18,10 +18,10 @@ footer {
     height: 209px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     @include mixins.respond-to(M) {
       width: 375px;
-      justify-content: center;
     }
   }
 
@@ -45,5 +45,5 @@ footer {
   display: flex;
   max-width: 100%;
   justify-content: center;
-  margin: 30px;
+  margin-top: 30px;
 }

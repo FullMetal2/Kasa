@@ -1,5 +1,5 @@
-$color: rgba(255, 96, 96, 1);
-$family: Montserrat;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 .error404 {
   display: flex;
@@ -7,24 +7,43 @@ $family: Montserrat;
   justify-content: center;
   align-items: center;
   gap: 139px;
-  color: $color;
-  font: {
-    family: $family;
+  color: variables.$text-color3;
+  @include mixins.respond-to(M) {
+    gap: 100px;
   }
   h1 {
     margin: 90px auto;
     font: {
       size: 288px;
     }
+    @include mixins.respond-to(M) {
+      font-size: 96px;
+    }
   }
   p {
+    @include mixins.respond-to(M) {
+      margin-bottom: 50px;
+    }
     font: {
       size: 36px;
+    }
+    @include mixins.respond-to(M) {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+  .br-responsive {
+    display: none;
+    @include mixins.respond-to(M) {
+      display: block;
     }
   }
   .link-error {
     color: black;
     font-size: 18px;
     font-weight: 500;
+    @include mixins.respond-to(M) {
+      font-size: 14px;
+    }
   }
 }

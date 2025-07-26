@@ -1,28 +1,30 @@
-@use "../../styles/abstracts/" as abstracts;
-
-$color: #fff;
-
-$family: Montserrat;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 .collapse {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 1023px;
-  @media (max-width: 1023px) and (min-width: 770px) {
+  margin-bottom: 10px;
+  background: variables.$collapse-bg;
+  @include mixins.respond-to(T) {
     width: 600px;
   }
-  @media (max-width: 769px) {
+  @include mixins.respond-to(M) {
     width: 335px;
+  }
+  .content {
+    color: variables.$text-color2;
   }
 
   .arrow-collapse {
     width: 24px;
     height: 13px;
-    padding: 10px;
+    margin-right: 15px;
     cursor: pointer;
     transition: transform 0.3s ease;
-    @media (max-width: 769px) {
+    @include mixins.respond-to(M) {
       width: 16px;
       height: 9px;
     }
@@ -34,18 +36,16 @@ $family: Montserrat;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: $color;
-    background: abstracts.$bg-color;
+    color: variables.$text-color;
+    background: variables.$bg-color;
     border-radius: 5px;
     height: 50px;
     padding-left: 10px;
-    margin-top: 15px;
     font: {
-      family: $family;
       weight: 700;
       size: 24px;
     }
-    @media (max-width: 769px) {
+    @include mixins.respond-to(M) {
       height: 30px;
       font: {
         size: 13px;
@@ -53,11 +53,12 @@ $family: Montserrat;
     }
   }
   .content {
+    background: variables.$collapse-bg;
+    margin-top: 15px;
     font: {
-      family: $family;
       size: 18px;
     }
-    @media (max-width: 769px) {
+    @include mixins.respond-to(M) {
       font: {
         size: 12px;
       }

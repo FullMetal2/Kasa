@@ -11,7 +11,7 @@ function RatingHousing() {
   return (
     <div>
       {logement && (
-        <article>
+        <article className="container-star">
           {star.map((i) => (
             <span
               key={i}

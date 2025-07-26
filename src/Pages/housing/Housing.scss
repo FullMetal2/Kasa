@@ -1,27 +1,23 @@
-$color: rgba(255, 96, 96, 1);
-$family: Montserrat;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 .title {
-  color: $color;
+  color: variables.$text-color3;
   margin: 0;
   font: {
-    family: $family;
     size: 36px;
     weight: 500;
   }
-  @media (max-width: 769px) {
+  @include mixins.respond-to(M) {
     width: 335px;
-    font : {
-      size: 18px;
-    }
+    font-size: variables.$font-text;
   }
 }
 .location {
   margin-top: 10px;
   margin-bottom: 20px;
   font: {
-    family: $family;
-    size: 18px;
+    size: variables.$font-text;
     weight: 500;
   }
 }
@@ -30,6 +26,12 @@ $family: Montserrat;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: auto auto auto;
   width: 1240px;
+  @include mixins.respond-to(M) {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    padding: 0 20px;
+  }
 }
 .container-host {
   display: flex;
@@ -40,20 +42,37 @@ $family: Montserrat;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @include mixins.respond-to(M) {
+    width: 375px;
+  }
 }
 .right {
   display: flex;
   flex-direction: column;
   align-items: end;
+  @include mixins.respond-to(M) {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .collapse-housing {
   display: flex;
   width: 1240px;
   align-items: flex-start;
   gap: 76px;
+  flex: 1;
+  @include mixins.respond-to(M) {
+    width: 375px;
+    height: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }
 .left {
-  @media (max-width: 769px) {
+  color: variables.$text-color2;
+  @include mixins.respond-to(M) {
     width: 335px;
   }
 }

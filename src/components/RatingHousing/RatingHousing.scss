@@ -1,12 +1,25 @@
-@use "../../styles/main.scss" as *;
+@use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 .fa-star {
-  color: rgba(227, 227, 227, 1);
-
-  font-size: 20px;
+  color: variables.$color-star;
+  font-size: 18px;
+  @include mixins.respond-to(M) {
+    font-size: 13px;
+  }
 }
 
 span.active .fa-star {
-  color: rgba(255, 96, 96, 1);
-  font-size: 20px;
+  color: variables.$bg-color;
+  font-size: 18px;
+  @include mixins.respond-to(M) {
+    font-size: 13px;
+  }
+}
+.container-star {
+  display: flex;
+  gap: 10px;
+  @include mixins.respond-to(M) {
+    gap: 5px;
+  }
 }
