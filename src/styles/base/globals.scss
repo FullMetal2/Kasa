@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as variables;
+@use "../abstracts/mixins" as mixins;
 
 * {
   margin: 0;
@@ -10,4 +11,9 @@ body {
   color: variables.$text-color;
   width: variables.$container-max-width;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  @include mixins.respond-to(M) {
+    width: 375px;
+  }
 }

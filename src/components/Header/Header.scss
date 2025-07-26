@@ -14,6 +14,10 @@ header {
     align-items: center;
     margin: 0 auto;
     padding: 0 20px;
+    @include mixins.respond-to(M) {
+      gap: 30px;
+      padding: 0;
+    }
   }
 
   .header-logo {
@@ -50,6 +54,9 @@ header {
     &.active {
       color: variables.$text-color-header;
       text-decoration: underline;
+      @include mixins.respond-to(M) {
+        text-decoration: none;
+      }
     }
     @include mixins.respond-to(M) {
       font-size: variables.$font-responsive;

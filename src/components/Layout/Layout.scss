@@ -1,7 +1,13 @@
+@use "../../styles/abstracts/mixins" as mixins;
+
 .general-layout {
   margin: auto;
   padding: 0;
-}
-.container-layout {
-  outline: 5px solid red;
+  @include mixins.respond-to(M) {
+    width: 335px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }

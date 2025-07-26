@@ -24,7 +24,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     width: 335px;
     height: 111px;
   }
@@ -34,7 +34,7 @@
     font-size: 48px;
     z-index: 1;
     text-shadow: 1px 1px 2px black;
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       font-size: 24px;
       padding-left: 20px;
     }
