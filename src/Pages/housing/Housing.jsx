@@ -1,5 +1,5 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import logementsData from "../../data/JSON.logements.json";
 import Collapse from "../../components/Collapse/Collapse";
 import TagsHousing from "../../components/TagsHousing/TagsHousing";
@@ -12,6 +12,14 @@ import "./Housing.scss";
 function Housing() {
   const { id } = useParams();
   const logement = logementsData.find((item) => item.id === id);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!logement) {
+      navigate("/Error404");
+    }
+    [logement];
+  });
 
   return (
     <div className="gallery-housing">

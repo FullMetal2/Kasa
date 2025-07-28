@@ -1,4 +1,5 @@
 @use "../../styles/abstracts/variables" as variables;
+@use "../../styles/abstracts/mixins" as mixins;
 
 .container-banner {
   display: flex;
@@ -24,17 +25,16 @@
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 20px;
   }
-  @media (max-width: 768px) {
+  @include mixins.respond-to(M) {
     width: 335px;
     height: 111px;
   }
   h1 {
-    font-family: variables.$font-main;
     color: variables.$text-color;
     font-size: 48px;
     z-index: 1;
     text-shadow: 1px 1px 2px black;
-    @media (max-width: 768px) {
+    @include mixins.respond-to(M) {
       font-size: 24px;
       padding-left: 20px;
     }
