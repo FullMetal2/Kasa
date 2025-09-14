@@ -21,12 +21,11 @@
     }
   }
   p {
+    font-size: 36px;
     @include mixins.respond-to(M) {
       margin-bottom: 50px;
     }
-    font: {
-      size: 36px;
-    }
+
     @include mixins.respond-to(M) {
       font-size: 18px;
       text-align: center;

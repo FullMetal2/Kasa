@@ -18,8 +18,7 @@ function Housing() {
     if (!logement) {
       navigate("/Error404");
     }
-    [logement];
-  });
+  }, [logement, navigate]);
 
   return (
     <div className="gallery-housing">
@@ -29,7 +28,7 @@ function Housing() {
             <Carrousel />
             <div className="grid">
               <div className="left">
-                <h2 className="title">{logement.title}</h2>
+                <h1 className="title">{logement.title}</h1>
                 <p className="location">{logement.location}</p>
                 <TagsHousing />
               </div>
