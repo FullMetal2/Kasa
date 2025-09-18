@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Collapse.scss";
 import Arrow from "../../assets/logo/Vector.png";
 import { useId } from "react";

@@ -1,4 +1,3 @@
-import React from "react";
 import BannerAbout from "../../components/Banner/BannerAbout";
 import Collapse from "../../components/Collapse/Collapse";
 import "./About.scss";
