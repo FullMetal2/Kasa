@@ -3,7 +3,7 @@ import { useState } from "react";
 import logementsData from "../../data/JSON.logements.json";
 import "./Carrousel.scss";
 import vector1 from "../../assets/logo/Vector(1).png";
-import vector2 from "../../assets/logo/vector2.png";
+import vector2 from "../../assets/logo/Vector2.png";
 
 function Carrousel() {
   const { id } = useParams();
